@@ -9,8 +9,17 @@
 
 :root {
     --light-color: #fff;
+    --light-color2: #fafafa;
     --dark-color: #000;
     --blue-color: #59AAE7;
+    --grey-color: #737373;
+    --green-color: #2dc071;
+    --green-color2: #28a745;
+    --darkblue-color: #252b42;
+    --c1-color: #23A6F0;
+    --c2-color: #23856D;
+    --c3-color: #E77C40;
+    --greylight-color:rgb(239, 233, 233);
 }
 
 /* Beginning of the header */
@@ -23,7 +32,7 @@
     justify-content: space-between;
     align-items: center;
     padding: .7rem;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 600;
 }
 
@@ -34,18 +43,18 @@ a {
 
 /* Links para rede sociais */
 #nav-social {
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
 }
 
 .icon-social {
-    width: 20px;
-    height: 20px;
-    margin: 0rem 0rem 0rem 1rem;
+    width: 18px;
+    height: 18px;
+    margin: 0rem 0rem 0rem .8rem;
 }
 
 #p-social {
     float: left;
-    margin-right: .5rem;
+    margin-right: .3rem;
 }
 
 /* Fim - Links para rede sociais */
@@ -58,6 +67,7 @@ a {
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
+    background-color: var(--light-color);
 }
 
 #navbar-light h3 {
@@ -77,11 +87,15 @@ a {
 
 .nav-item {
     list-style: none;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .nav-item a{
-    color: var(--dark-color);
+    color: var(--grey-color);
 }
+
+/* Beginning of the Login - navbar */
 
 #login-navbar {
     display: flex;
@@ -100,7 +114,270 @@ a {
     margin: 0 .9rem;
     margin: 0rem 1rem 0rem -.7rem;
 }
+/* End of the Login - Navbar */
 /* End of the Light - Navbar */
 
+/* Beginning of the header - img */
 
+.container {
+    max-width: 100%;
+}
+
+.banner { 
+    position: absolute; 
+    top: 70%; 
+    left: 35%; 
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    color: #fff; 
+} 
+
+.banner-text h1, .banner-text h2, .banner-text p {
+    margin: 2.5rem 0; 
+} 
+
+.banner-text h2 {
+    font-size: 2.5rem;
+}
+
+.btn-shop-now { 
+    background-color: var(--green-color); 
+    color: white; border: none; 
+    padding: .8rem 1.2rem; 
+    font-size: 1rem; 
+    font-weight: 600;
+    cursor: pointer; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: .4s;
+} 
+
+.btn-shop-now:hover { 
+    background-color: var(--green-color2);
+}
+
+/* End of the header - img */
 /* End of the header */
+
+/* Beginning of the Main */
+/* Editors Pick */
+
+#bg-editor {
+    background-color: var(--light-color2);
+    height: 100%;
+    padding-bottom: 3rem;
+}
+
+.main-content > h3 {
+    display: flex;
+    justify-content: center;
+    color: var(--darkblue-color);
+    padding-top: 4rem;
+}
+
+.main-content p {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    color: var(--grey-color);
+}
+
+.img-content {
+   display: inline;
+}
+
+.men {
+    float: left;
+    
+}
+
+.women {
+    float: left;
+}
+
+.img-content > .men {
+    margin-left: 100px;
+}
+
+.category > #women-button, #kids-button {
+    position: relative;
+    bottom: .9rem;
+    right: 14rem;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category > #men-button {
+    position: relative;
+    bottom: .9rem;
+    right: 30rem;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category > #accessories-button {
+    position: relative;
+    bottom: 2.3rem;
+    right: -1rem;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Bestseller Products */
+
+.main-content > h4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: -3rem;
+    color: var(--grey-color);
+}
+span {
+    color: var(--green-color2);
+    font-weight: bold;
+}
+
+.container-clothes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 0 3rem;
+}
+
+.info-clothes {
+    margin-bottom: 2rem;
+}
+
+.info-clothes>p,div,span {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#divs {
+    margin-left: 4rem;
+}
+.p-span {
+    float: left;
+    margin-left: 3rem;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    float: left;
+    margin: 0 .3rem;
+}
+
+.c1 {
+    background-color: var(--c1-color);
+}
+
+.c2 {
+    background-color: var(--c2-color);
+}
+
+.c3 {
+    background-color: var(--c3-color);
+}
+
+.c4 {
+    background-color: var(--darkblue-color);
+}
+/* End of the Bestseller */
+
+.container2 {
+    width: 100%;
+    height: 100vh;
+    background: var(--c2-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+}
+
+.banner-2 {
+   color: var(--light-color);
+}
+
+.banner-2 h1{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.banner-2 h2 {
+    font-size: 2.5rem;
+}
+
+.banner-2 h1, .banner-2 h2, .banner-2 p {
+    margin: 2.5rem 0; 
+} 
+
+#p-carrossel {
+    font-weight: 400;
+    font-size: .9rem;
+} 
+
+#price-carrossel {
+    font-weight: 700;
+    float: left;
+    margin-right: 5rem;
+}
+/* End of the VITA Classic */
+
+.container-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 5rem;
+}
+.banner-3 h1, .banner-3 h2, .banner-3 p {
+    margin: 2.5rem 0; 
+} 
+
+.banner-3 h1 {
+    color: rgb(162, 161, 161);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.banner-3 h2 {
+    color: var(--darkblue-color);
+}
+
+.banner-3 p {
+    font-weight: 600;
+    color: var(--grey-color);
+}
+
+.btn-read-more { 
+    background-color: var(--light-color);
+    color: var(--green-color);  
+    padding: .8rem 1.2rem; 
+    font-size: 1rem; 
+    font-weight: 600;
+    cursor: pointer; 
+    border: solid 1px var(--green-color);
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: .4s;
+} 
+
+.btn-read-more:hover { 
+    background-color: var(--greylight-color);
+}
+
+
+/* End of the VITA Classic */
