@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(slideIndex);
     }
 
-    // chama a função pelos botões de seta
+    // chama a função através dos botões de seta
     window.changeSlide = function(direction) {
         if (direction === 1) {
             nextSlide();
@@ -37,7 +37,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // da inicio ao slide
     showSlide(slideIndex);
 
-    // muda de slide automaticamente a cada 3 segundos
-    setInterval(nextSlide, 3000);
+    // muda de slide automaticamente a cada 5 segundos
+    setInterval(nextSlide, 5000);
 });
 
+// nav menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#nav-list");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}

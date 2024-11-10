@@ -20,6 +20,7 @@
     --c2-color: #23856D;
     --c3-color: #E77C40;
     --greylight-color:rgb(239, 233, 233);
+    --c1-color2: #1889ca;
 }
 
 /* Beginning of the header */
@@ -101,6 +102,25 @@ a {
     color: var(--grey-color);
 }
 
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 
+    ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* Beginning of the Login - navbar */
 
 #login-navbar {
@@ -120,6 +140,7 @@ a {
     margin: 0 .9rem;
     margin: 0rem 1rem 0rem -.7rem;
 }
+
 /* End of the Login - Navbar */
 /* End of the Light - Navbar */
 
@@ -138,7 +159,7 @@ a {
     color: #fff; 
 } 
 
-.banner-text h1, .banner-text h2, .banner-text p {
+.text h1, .banner-text h2, .banner-text p {
     margin: 2.5rem 0; 
 } 
 
@@ -170,15 +191,11 @@ a {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
+    top: 65%;
+    font-size: 40px;
     color: white;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
 }
 
 .prev {
@@ -188,6 +205,7 @@ a {
 .next {
     right: 10px;
 }
+
 
 /* End of the header - img */
 /* End of the header */
@@ -436,6 +454,22 @@ span {
 .btn-read-more:hover { 
     background-color: var(--greylight-color);
 }
+
+.btn-buy-now { 
+    background-color: var(--green-color); 
+    color: white; border: none; 
+    padding: .8rem 1.2rem; 
+    font-size: 1rem; 
+    font-weight: 600;
+    cursor: pointer; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: .4s;
+} 
+
+.btn-buy-now:hover { 
+    background-color: var(--green-color2);
+}
 /* End of the Neural Universe */
 
 #container-4 {
@@ -525,10 +559,18 @@ span {
 /* End of the Main */
 
 /* Beginning of the Footer */
-#footer-logo {
+#footer-logo{
+    display: flex;
+    justify-content: space-around;
+    gap: 40rem;
     padding: 5rem;
     background-color: var(--light-color2);
     box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+#footer-contact {
+    gap: 2rem;
+    height: 1.2rem;
 }
 
 #footer-content {
@@ -575,3 +617,244 @@ span {
     padding: 2rem 0 2rem 10rem;
 }
 /* End of the Footer */
+
+@media (max-width: 1224px) {
+
+    .accessories {
+        float: left;
+        margin-left: 6.3rem;
+        margin-right: -6rem;
+    }
+
+    .category > #accessories-button {
+        position: relative;
+        bottom: .9rem;
+        right: 15rem;
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .container2 {
+        height: 59vh;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container-clothes {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    #grid-cards {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #login-navbar {
+        display: none;
+    }
+
+    .none {
+        display: none;
+    }
+
+    #nav-list {
+        position: absolute;
+        left: -100%;
+        top: 2.1rem;
+        flex-direction: column;
+        background-color: var(--light-color);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 10;
+        padding: 4rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #nav-list.active {
+        left: 0;
+        margin-top: 35px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger .bar {
+        background-color: #000000;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .mobile-only > a {
+        color: var(--grey-color);
+        font-weight: 600;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #nav-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav-links > h3 {
+        margin-right: 52rem;
+    }
+
+    #navbar-dark {
+        display: none;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rem;
+        height: 230vh;
+        width: 100%;
+    }
+
+    .banner-2 {
+        margin: -10rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-add-cart {
+        width: 160px;
+        height: 60px;
+    }
+
+    .container-3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-left: 5rem;
+    }
+
+    .banner-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    
+    .banner-3 > button {
+        margin: 1rem 0;
+    }
+
+    .btn-buy-now { 
+        background-color: var(--blue-color); 
+        color: white; border: none; 
+        padding: .8rem 1.2rem; 
+        font-size: 1rem; 
+        font-weight: 600;
+        cursor: pointer; 
+        border-radius: 5px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        transition: .4s;
+    } 
+    
+    .btn-buy-now:hover { 
+        background-color: var(--c1-color2);
+    }
+
+    .img-content {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+     .women, .accessories, .kids {
+        display: flex;
+        justify-content: center;  
+        align-items: center; 
+        margin: .3rem 0
+    }
+
+    .women > button {
+        height: 25px;
+        margin-top: 30rem;
+    }
+
+    .accessories > button {
+        height: 25px;
+        margin-top: 13rem;
+    }
+
+    .kids > button {
+        height: 25px;
+        margin-top: 13rem;
+    }
+
+
+     .accessories {
+        margin-left: 2.3rem;
+    }
+
+     .kids {
+        margin-left: -1.7rem;
+     }
+}
+
+@media (max-width: 970px) {
+    #nav-links > h3 {
+        margin-right: 47rem;
+    }
+
+    .banner-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text h1, .banner-text h2, .banner-text p {
+        margin: 1rem 0; 
+    }
+
+    .prev {
+        left: 100px;
+    }
+    
+    .next {
+        right: 380px;
+    }
+
+   .responsive {
+    width: 323px;
+    height: 500px;
+   }
+}
