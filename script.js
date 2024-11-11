@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //função para alterar o slide com base na direção
     showSlide(slideIndex);
 
-    //muda de slide automaticamente a cada 5 segundos
+    //muda de slide automaticamente a cada 5 segundos.
     setInterval(nextSlide, 5000);
 });
 

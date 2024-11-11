@@ -622,17 +622,7 @@ span {
 }
 /* End of the Footer */
 
-@media(min-width: 1589px) {
-    #accessories-button {
-        margin-right: 15rem;
-    }
-}
 
-@media(min-width: 1349px) {
-    #accessories-button {
-        margin-right: 20rem;
-    }
-}
 
 @media (max-width: 1224px) {
 
@@ -808,6 +798,23 @@ span {
     .btn-buy-now:hover { 
         background-color: var(--c1-color2);
     }
+
+    .btn-read-more { 
+    background-color: var(--light-color);
+    color: var(--blue-color);  
+    padding: .8rem 1.2rem; 
+    font-size: 1rem; 
+    font-weight: 600;
+    cursor: pointer; 
+    border: solid 1px var(--blue-color);
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: .4s;
+} 
+
+.btn-read-more:hover { 
+    background-color: var(--greylight-color);
+}
 
     .img-content {
         display: grid;
