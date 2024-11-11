@@ -61,3 +61,20 @@ function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
+
+
+
+
+
+function subscribe() {
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message');
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(email)) {
+        message.innerText = "Thank you for subscribing!";
+    } else {
+        message.innerText = "Please enter a valid email address.";
+    }
+}
+
